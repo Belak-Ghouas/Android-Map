@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mzd.myapp.ui.base.BaseToolbarActivityViewModelImpl" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear_layout_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        tools:targetApi="lollipop">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            style="@style/toolbarBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_toolbar_size"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <!-- start icon -->
+            <ImageView
+                android:id="@+id/ic_psa_logo"
+                android:layout_width="@dimen/toolbar_left_image_size"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/margin_normal_12dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal_12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@mipmap/logo"
+                app:tint="@android:color/white"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/toolbar_back"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                android:tint="@android:color/white"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <!-- start icon text -->
+            <TextView
+            android:id="@+id/toolbar_UserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"
+            android:focusable="true"
+            android:layout_marginStart="@dimen/margin_normal_x3"
+                android:textSize="@dimen/progress_bar_small_size"
+                tools:text="Nom Prenom"
+            tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tvScreenName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal_x5"
+                android:textColor="#FFFFFF"
+                android:visibility="visible"
+                android:focusable="true"
+                tools:text="Screen Name"
+                android:textSize="@dimen/progress_bar_small_size"
+                tools:visibility="visible"/>
+
+            <!-- title -->
+
+
+            <ImageView
+                android:id="@+id/toolbar_new_monitoring"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_normal_x2"
+                android:src="@drawable/ic_more"
+                android:tint="@color/clickable_color"
+                android:visibility="gone"
+                tools:ignore="ContentDescription"
+                tools:visibility="gone" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/toolbar_Logout"
+            android:layout_width="41dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            android:tint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

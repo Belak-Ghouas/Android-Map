@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1b365e</color>
+    <color name="colorPrimaryDark">#1e2336</color>
+    <color name="colorAccent">#1ec5e3</color>
+    <color name="gris_clair">#F2F2F2</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="overlay_color">#80000000</color>
+    <!-- dialog -->
+    <color name="dialog_neg_icon">#FC4238</color>
+    <color name="dialog_pos_icon">#5AB005</color>
+
+
+    <color name="color_hint">@color/white_50</color>
+    <color name="clickable_color">#50ADEA</color>
+    <color name="urgent_color">#e74c3c</color>
+    <color name="save_color">#2ecc71</color>
+    <color name="search_equipment_color">#2980b9</color>
+    <color name="portfolio_color">#0094FF</color>
+    <color name="gray_light_color">#F3F1F1</color>
+
+    <color name="det_underline_color_focused">#FFFFFF</color>
+    <color name="det_underline_color_normal">#505050</color>
+    <color name="det_editor_error_color">@android:color/holo_red_dark</color>
+    <color name="bus_orange">@android:color/holo_orange_dark</color>
+
+    <color name="document_disabled">#AFAFAF</color>
+    <!-- buttons -->
+    <!-- positive -->
+    <color name="button_positive_background_normal">@color/clickable_color</color>
+    <color name="button_positive_background_pressed">#1e2336</color>
+    <color name="button_positive_background_disabled">#1e2336</color>
+    <color name="button_positive_text_normal">#FFFFFF</color>
+    <color name="button_positive_text_pressed">#DDDDDD</color>
+    <color name="button_positive_text_disabled">#33FFFFFF</color>
+
+    <!-- urgent -->
+    <color name="button_urgent_background_normal">@color/urgent_color</color>
+    <color name="button_urgent_background_pressed">#1e2336</color>
+    <color name="button_urgent_background_disabled">#1e2336</color>
+
+    <!-- save -->
+    <color name="button_save_background_normal">@color/save_color</color>
+    <color name="button_save_background_pressed">#1e2336</color>
+    <color name="button_save_background_disabled">#1e2336</color>
+
+    <color name="icons_color">#1ec5e3</color>
+
+    <!-- imageButtons -->
+    <color name="image_button_positive_background_normal">#00EEEEEE</color>
+    <color name="image_button_positive_background_pressed">#001e2336</color>
+    <color name="image_button_positive_background_disabled">#1e2336</color>
+    <color name="image_button_positive_text_normal">#2a1818</color>
+    <color name="image_button_positive_text_pressed">#DDDDDD</color>
+    <color name="image_button_positive_text_disabled">#339f0f0f</color>
+
+    <color name="main_background_color_start">#300930</color>
+    <color name="main_background_color_end">#100310</color>
+
+    <!-- text view -->
+    <color name="text_main_color">@android:color/white</color>
+    <color name="subtitle_color">#616161</color>
+    <color name="disabled_color">#AAAAAA</color>
+    <color name="text_secondary_color">@color/colorPrimaryDark</color>
+    <color name="text_third_color">#005587</color>
+    <color name="search_highlight_color">#FFFF00</color>
+    <color name="text_black">#000000</color>
+
+    <!-- history timeline -->
+    <color name="history_series_0_color">#3F51B5</color>
+    <color name="history_series_1_color">#FF4081</color>
+    <color name="history_side_bar_background_color">#10101010</color>
+    <color name="filters_color">#32101010</color>
+
+    <!--thumbnail-->
+    <color name="thumbnail_delete_background_color">@color/colorPrimaryDark</color>
+    <color name="thumbnail_background_color">#DDDDDD</color>
+
+    <!--progressbar -->
+    <color name="progressbar_background">@color/det_underline_color_normal</color>
+    <color name="progressbar_filled">@color/save_color</color>
+
+    <color name="preview_image_confirm_button_color">@color/save_color</color>
+    <color name="preview_image_discard_button_color">@android:color/black</color>
+
+    <!-- palette -->
+    <color name="palette_background_color">#DDDDDD</color>
+    <array name="plt_extended_colors">
+        <item>#FF0000</item>
+        <item>#000000</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#0000FF</item>
+        <item>#00FFFF</item>
+        <item>#FFFFFF</item>
+    </array>
+
+    <color name="zpr_background_color">#40fd978b</color>
+    <color name="zse_background_color">#fdfcbe</color>
+
+    <color name="ot_late_color">#e74c3c</color>
+    <color name="ot_in_progress_color">@android:color/holo_orange_dark</color>
+    <color name="ot_coming_color">#2ecc71</color>
+
+    <color name="color_selected_text">@android:color/white</color>
+    <color name="color_unselected_text">@color/clickable_color</color>
+
+    <color name="wn_main_color">@color/colorPrimaryDark</color>
+    <!--&lt;!&ndash; override lib color &ndash;&gt;-->
+    <!--<color name="wn_button_background_normal">@color/wn_main_color</color>-->
+    <!--<color name="wn_button_background_pressed">#7198DC</color>-->
+
+    <color name="colorPprimary">#1F5BF3</color>
+    <color name="colorPprimaryDark">#0947E8</color>
+    <color name="colorAaccent">#00A5FF</color>
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+</resources>

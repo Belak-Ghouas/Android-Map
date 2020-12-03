@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_progress_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ProgressBar
+        android:layout_width="@dimen/spinning_wait_size"
+        android:layout_height="@dimen/spinning_wait_size"
+        android:theme="@style/AppTheme.ProgressBarTheme" />
+</LinearLayout>

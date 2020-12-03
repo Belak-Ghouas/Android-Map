@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="overlay_elevation">8dp</dimen>
+    <dimen name="margin_normal_half">4dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_normal_and_half">12dp</dimen>
+    <dimen name="margin_normal_0">0dp</dimen>
+    <dimen name="margin_normal_x2">16dp</dimen>
+    <dimen name="margin_normal_x2_half">20dp</dimen>
+    <dimen name="margin_normal_x3">24dp</dimen>
+    <dimen name="margin_normal_x4">32dp</dimen>
+    <dimen name="margin_normal_x5">80dp</dimen>
+
+    <dimen name="det_image_edit_text_left_image_width">38dp</dimen>
+    <dimen name="det_image_edit_text_right_image_width">40dp</dimen>
+    <dimen name="det_line_thickness_focused">1dp</dimen>
+    <dimen name="det_line_thickness_normal">0.5dp</dimen>
+
+    <!-- buttons -->
+    <dimen name="button_corner_radius">5dp</dimen>
+    <dimen name="image_button_corner_radius">0dp</dimen>
+    <dimen name="splash_logo_size">155dp</dimen>
+    <dimen name="login_logo_size">80dp</dimen>
+
+    <!-- recyclerview items -->
+    <dimen name="rv_icon_size">35dp</dimen>
+    <dimen name="rv_imageButton_height">60dp</dimen>
+    <dimen name="rv_imageButton_width">30dp</dimen>
+
+    <!-- text size -->
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_xlarge">24sp</dimen>
+    <dimen name="text_xxlarge">36sp</dimen>
+    <dimen name="text_xxxlarge">48sp</dimen>
+
+    <!-- QR visor constants -->
+
+    <!-- horizontal or vertical line thickness -->
+    <dimen name="line_thickness">0.5dp</dimen>
+
+    <!-- switch -->
+    <dimen name="sw_width">50dp</dimen>
+
+    <!-- home screen -->
+    <dimen name="home_logo_size">50dp</dimen>
+
+    <!-- timeline history -->
+    <dimen name="corner_radius">8dp</dimen>
+
+    <!-- OT editor/viewer -->
+    <dimen name="ot_viewer_legacy_comment_scroller_max_height">160dp</dimen>
+    <dimen name="below_thumbnail_list_margin">56dp</dimen>
+
+    <dimen name="ot_history_item_margin">10dp</dimen>
+
+    <!-- customViews -->
+    <dimen name="thumbnail_delete_dimen">32dp</dimen>
+    <dimen name="thumbnail_edit_dimen">32dp</dimen>
+    <dimen name="thumbnail_media_padding_top">16dp</dimen>
+    <dimen name="thumbnail_media_padding_bottom">16dp</dimen>
+    <dimen name="thumbnail_media_padding_left">16dp</dimen>
+    <dimen name="thumbnail_media_padding_right">16dp</dimen>
+    <dimen name="thumbnail_size">120dp</dimen>
+    <dimen name="preview_button_action_size">64dp</dimen>
+
+    <dimen name="palette_color_sample_max_size">20dp</dimen>
+    <dimen name="palette_color_sample_min_size">3dp</dimen>
+    <dimen name="palette_tools_size">48dp</dimen>
+    <dimen name="palette_tools_size_eraser">32dp</dimen>
+
+    <!-- item ot list -->
+    <dimen name="badge_image_view_size">24dp</dimen>
+    <dimen name="badge_image_view_badge_size">14dp</dimen>
+    <dimen name="iv_lock_size">24dp</dimen>
+
+    <dimen name="intermediate_screen_button_margin">50dp</dimen>
+    <dimen name="intermediate_screen_button_margin_half">25dp</dimen>
+
+    <dimen name="progress_bar_small_size">25dp</dimen>
+
+    <dimen name="list_decoration_top_height">8dp</dimen>
+    <dimen name="list_decoration_right_width">8dp</dimen>
+    <dimen name="list_decoration_bottom_height">8dp</dimen>
+    <dimen name="list_decoration_left_width">8dp</dimen>
+    <!-- margin -->
+    <dimen name="margin_normal_quarter">2dp</dimen>
+    <dimen name="margin_normal_12dp">12dp</dimen>
+    <dimen name="margin_normal_20dp">20dp</dimen>
+
+    <dimen name="spinning_wait_size">30dp</dimen>
+
+    <dimen name="custom_toolbar_size">64dp</dimen>
+    <dimen name="toolbar_left_image_size">75dp</dimen>
+    <!-- logo size -->
+
+    <dimen name="l_icons_size">150dp</dimen>
+    <dimen name="home_icon_size">35dp</dimen>
+    <dimen name="toolbar_icon_size">34dp</dimen>
+    <dimen name="history_icon_size">40dp</dimen>
+    <dimen name="history_item_icon_size">64dp</dimen>
+
+
+
+    <!-- text size -->
+    <dimen name="text_s">10sp</dimen>
+    <dimen name="text_n">14sp</dimen>
+    <dimen name="text_m">16sp</dimen>
+    <dimen name="text_toolbar">@dimen/text_l</dimen>
+    <dimen name="text_l">18sp</dimen>
+    <dimen name="text_l_2">20sp</dimen>
+    <dimen name="text_xl">24sp</dimen>
+    <dimen name="text_xl_2">30sp</dimen>
+    <dimen name="text_xxl">36sp</dimen>
+    <dimen name="text_xxxl">48sp</dimen>
+    <dimen name="verify_content_editext_height">120dp</dimen>
+    <dimen name="headerTextSize">22sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+
+    <dimen name="signup_text_margin_top">10dp</dimen>
+
+</resources>

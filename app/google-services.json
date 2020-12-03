@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "911366580866",
+    "firebase_url": "https://mzdhirak.firebaseio.com",
+    "project_id": "mzdhirak",
+    "storage_bucket": "mzdhirak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911366580866:android:87923cd41c326305bb629b",
+        "android_client_info": {
+          "package_name": "com.mzd.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911366580866-p83ptldcao7ohe37us3nsqajogejrg6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mzd.myapp",
+            "certificate_hash": "5ac8943c8b609306ffbbc9072881e95c9a483ea5"
+          }
+        },
+        {
+          "client_id": "911366580866-vjomqc89kfaelciqfmtln6sk5ii5ef5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKqFlW8y6k1er8HF4Vj4uqk0WXHzSMxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911366580866-vjomqc89kfaelciqfmtln6sk5ii5ef5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

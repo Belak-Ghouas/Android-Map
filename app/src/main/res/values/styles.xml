@@ -1,0 +1,420 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- actionBar titles -->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+        <item name="subtitleTextStyle">@style/MyActionBarSubtitle</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyActionBarTitle" parent="@style/textMainStyle.large" />
+
+    <style name="MyActionBarSubtitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="AppTheme.ProgressBarTheme">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyActionBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="searchHintIcon">@null</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <!-- non fullscreen style -->
+    <style name="NonFullScreenActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">93%</item>
+        <item name="android:windowMinWidthMinor">93%</item>
+    </style>
+
+    <!-- toolbar black style -->
+    <style name="toolbarBlackStyle" parent="AppTheme">
+        <item name="android:background">@color/main_background_color_start</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Toolbar style -->
+    <style name="toolbarTitleStyle">
+        <item name="android:textSize">@dimen/text_toolbar</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="RatingNonFullScreenActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">93%</item>
+        <item name="android:windowMinWidthMinor">98%</item>
+        <item name="windowFixedHeightMajor">37%</item>
+        <item name="windowFixedHeightMinor">37%</item>
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="colorControlActivated">@color/clickable_color</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="actionBarTheme">@style/MyActionBarTheme</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="searchViewStyle">@style/SearchView</item>
+    </style>
+
+    <style name="deletableEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/color_hint</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/det_editor_background_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:padding">@dimen/margin_normal_half</item>
+        <item name="android:drawableEnd">@drawable/ic_delete_editor_content</item>
+        <item name="android:drawableRight">@drawable/ic_delete_editor_content</item>
+
+
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+    </style>
+
+    <style name="normalEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/color_hint</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
+
+    <style name="deletableEditText.password">
+        <item name="android:inputType">textPassword</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <!-- text main style -->
+    <style name="textMainStyle">
+        <item name="android:textColor">@color/text_main_color</item>
+    </style>
+
+    <style name="textMainStyle.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="textMainStyle.normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="textMainStyle.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="textMainStyle.xlarge">
+        <item name="android:textSize">@dimen/text_xlarge</item>
+    </style>
+
+    <style name="timer" parent="textMainStyle.large">
+        <item name="android:padding">@dimen/margin_normal_half</item>
+        <item name="android:background">@drawable/translucent_black_rounded</item>
+    </style>
+
+    <!-- subtitle style -->
+    <style name="subtitleStyle">
+        <item name="android:textColor">@color/subtitle_color</item>
+    </style>
+
+    <style name="subtitleStyle.small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="subtitleStyle.normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="subtitleStyle.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <!-- text secondary style -->
+    <style name="textSecondaryStyle">
+        <item name="android:textColor">@color/text_secondary_color</item>
+    </style>
+
+    <style name="textSecondaryStyle.normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="textSecondaryStyle.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <!-- text third style -->
+    <style name="textThirdStyle">
+        <item name="android:textColor">@color/text_third_color</item>
+    </style>
+
+    <style name="textThirdStyle.normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="textThirdStyle.large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="compappButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="compappImageButton.camerapreview" parent="@android:style/Widget.ImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:layout_width">@dimen/preview_button_action_size</item>
+        <item name="android:layout_height">@dimen/preview_button_action_size</item>
+    </style>
+
+    <style name="compappImageButton.camerapreview.dark">
+        <item name="android:background">@drawable/ic_circle_fill_dark</item>
+    </style>
+
+    <style name="compappImageButton.camerapreview.light">
+        <item name="android:background">@drawable/ic_circle_fill_light</item>
+    </style>
+
+    <style name="compappImageButton" parent="@android:style/Widget.ImageButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="compappButton.positive">
+        <item name="android:background">@drawable/button_background_positive</item>
+        <item name="android:textColor">@drawable/button_text_positive</item>
+    </style>
+
+    <style name="compappButton.filter">
+        <item name="android:background">@drawable/button_background_positive</item>
+        <item name="android:textColor">@drawable/button_text_positive</item>
+        <item name="android:radius">0dp</item>
+    </style>
+
+    <style name="compappButton.urgent">
+        <item name="android:background">@drawable/button_background_urgent</item>
+        <item name="android:textColor">@drawable/button_text_positive</item>
+    </style>
+
+    <style name="compappButton.save">
+        <item name="android:background">@drawable/button_background_save</item>
+        <item name="android:textColor">@drawable/button_text_positive</item>
+    </style>
+
+    <style name="compappImageButton.positive">
+        <item name="android:background">@drawable/image_button_background_positive</item>
+        <item name="android:textColor">@drawable/image_button_text_positive</item>
+    </style>
+
+    <style name="editTextHint">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/subtitle_color</item>
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="editTextHint.login">
+        <item name="android:layout_marginTop">@dimen/margin_normal_x2</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal_x2</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal_x2</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/color_hint</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="loginHistoryItem">
+
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/login_history_background</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal</item>
+        <item name="android:padding">@dimen/margin_normal</item>
+    </style>
+
+    <style name="lightLine">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="lightLine.horizontal">
+        <item name="android:layout_height">@dimen/line_thickness</item>
+    </style>
+
+    <style name="otTimeStyle">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:paddingTop">@dimen/margin_normal</item>
+        <item name="android:paddingStart">@dimen/margin_normal</item>
+        <item name="android:paddingEnd">1dp</item>
+    </style>
+
+    <style name="otTimeStyle.component" parent="textMainStyle.normal">
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:layout_marginBottom">@dimen/margin_normal</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="otTimeStyle.component.clickable" >
+        <item name="android:textColor">@color/clickable_color</item>
+    </style>
+
+    <style name="otTimeStyle.component.clickable.large" >
+        <item name="android:textSize">@dimen/text_xlarge</item>
+    </style>
+
+    <style name="tile_text">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="tile_text.center">
+        <item name="android:textSize">@dimen/text_xxxlarge</item>
+    </style>
+
+    <style name="home_username">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- history timeline -->
+    <style name="history_timeline_day">
+        <item name="android:textSize">@dimen/text_xlarge</item>
+        <item name="android:textColor">@color/text_third_color</item>
+    </style>
+
+    <style name="ot_editor_legacy_comment_style">
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textColor">@color/text_secondary_color</item>
+    </style>
+
+    <!-- ProgressBar -->
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:paddingEnd">@dimen/margin_normal_x3</item>
+        <item name="android:paddingStart">@dimen/margin_normal_x3</item>
+        <item name="android:layout_height">@dimen/margin_normal_half</item>
+        <item name="android:progressBackgroundTint">@color/progressbar_background</item>
+        <item name="android:progressTint">@color/progressbar_filled</item>
+    </style>
+
+    <!-- Selector -->
+    <style name="item">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+<!--    <style name="item.selected">-->
+<!--        <item name="android:background">@drawable/item_ot_type_selector_selected_background</item>-->
+<!--        <item name="android:textColor">@android:color/white</item>-->
+<!--    </style>-->
+
+<!--    <style name="item.unselected">-->
+<!--        <item name="android:background">@drawable/item_ot_type_selector_unselected_background</item>-->
+<!--        <item name="android:textColor">@android:color/black</item>-->
+<!--    </style>-->
+
+<!--    <style name="otTypeStyle">-->
+<!--        <item name="android:textSize">@dimen/text_normal</item>-->
+<!--        <item name="android:padding">@dimen/margin_normal_half</item>-->
+<!--        <item name="android:background">@drawable/item_ot_type_background</item>-->
+<!--        <item name="android:textColor">@android:color/black</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Week Navigator &ndash;&gt;-->
+<!--    <style name="dnNavigationButton" parent="dnButton">-->
+<!--        <item name="android:layout_width">@dimen/button_dimension</item>-->
+<!--        <item name="android:layout_height">@dimen/button_dimension</item>-->
+<!--        <item name="android:background">@drawable/button_background_positive</item>-->
+<!--        <item name="android:textColor">@drawable/button_text_positive</item>-->
+<!--    </style>-->
+
+    <style name="dnYearText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/clickable_color</item>
+    </style>
+
+    <style name="dnDayMonthText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/clickable_color</item>
+    </style>
+
+    <style name="intermediateScreenTitle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--designs for login and register-->
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="loginParent" parent="parent">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/loginBkColor</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="headerText" parent="parent">
+        <item name="android:textSize">@dimen/headerTextSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loginCard" parent="parent"></style>
+
+    <style name="linearParent" parent="parent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="headerTextPrimary" parent="headerText">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:textSize">@dimen/newsMoreTextSize</item>
+        <item name="android:backgroundTint">@color/primaryTextColor</item>
+    </style>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="loginButton" parent="viewParent">
+        <item name="android:background">@drawable/ic_login_bk</item>
+        <item name="android:textColor">@color/whiteTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+</resources>

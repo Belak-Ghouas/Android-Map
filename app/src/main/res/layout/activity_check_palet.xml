@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_store_activity_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="#FFFFFF"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.home.HomeActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_black_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:background="@drawable/rounded_corner_blue"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="Suivant"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancel_button" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:background="@drawable/rounded_color_grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:textAllCaps="false"
+            android:text="Annuler"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/nextButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="30sp"
+            />
+
+
+        <fragment
+            android:id="@+id/my_fragment_qrcode"
+            android:layout_width="309dp"
+            android:layout_height="311dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:tag="myCameraQRCode"
+            app:layout_constraintBottom_toTopOf="@id/nextButton"
+            app:layout_constraintEnd_toEndOf="@id/nextButton"
+            app:layout_constraintHorizontal_bias="0.536"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.376" />
+
+        <ImageView
+            android:id="@+id/iv_qr_visor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/margin_normal_x3"
+            android:src="@drawable/ic_qr_visor"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/my_fragment_qrcode"
+            app:layout_constraintEnd_toEndOf="@+id/my_fragment_qrcode"
+            app:layout_constraintStart_toStartOf="@id/my_fragment_qrcode"
+            app:layout_constraintTop_toTopOf="@+id/my_fragment_qrcode"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="146dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="148dp"
+            android:text="OU"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

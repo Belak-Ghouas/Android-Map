@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        style="@style/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/iv_record_video"
+        app:layout_constraintEnd_toEndOf="@id/iv_record_video"
+        app:layout_constraintStart_toStartOf="@id/iv_record_video"
+        tools:text="12:00/30:00" />
+
+    <ImageView
+        android:id="@+id/iv_recording_indicator"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:src="@drawable/button_record_video"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_timer"
+        app:layout_constraintEnd_toStartOf="@id/tv_timer"
+        app:layout_constraintTop_toTopOf="@id/tv_timer"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_take_picture"
+        android:layout_width="@dimen/preview_button_action_size"
+        android:layout_height="@dimen/preview_button_action_size"
+        android:layout_marginEnd="@dimen/margin_normal_x3"
+        android:layout_marginBottom="@dimen/margin_normal_x2"
+        android:src="@drawable/button_take_picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_record_video"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_record_video"
+        android:layout_width="@dimen/preview_button_action_size"
+        android:layout_height="@dimen/preview_button_action_size"
+        android:layout_marginBottom="@dimen/margin_normal_x2"
+        android:src="@drawable/button_record_video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_take_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_still_image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ib_still_image_confirm_button"
+        style="@style/compappImageButton.camerapreview.light"
+        android:layout_marginEnd="@dimen/margin_normal_x2"
+        android:layout_marginBottom="@dimen/margin_normal_x2"
+        android:src="@drawable/ic_preview_preview_accepted"
+        android:tint="@color/preview_image_confirm_button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/ib_still_image_discard_button"
+        style="@style/compappImageButton.camerapreview.light"
+        android:layout_marginStart="@dimen/margin_normal_x2"
+        android:layout_marginBottom="@dimen/margin_normal_x2"
+        android:src="@drawable/ic_preview_preview_discard"
+        android:tint="@color/preview_image_discard_button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <include layout="@layout/wait_overlay_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

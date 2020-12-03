@@ -1,0 +1,58 @@
+<resources>
+
+    <string name="app_name">MyApp</string>
+    <string name="dialog_default_positive">Yes</string>
+    <string name="dialog_default_neutral">Cancel</string>
+    <string name="dialog_default_negative">No</string>
+
+
+    <string name="check_pallet_activity_name">Check pallet</string>
+    <string name="pallets_list">Pallets list</string>
+    <string name="check_Container_activity_name">Container list</string>
+    <string name="HomeActivity">Nom Prénom</string>
+    <string name="PalletMetaDataActivity"> Palet information </string>
+    <string name="PaletInformationTemporaryActivity">Palet Information </string>
+    <string name="check_container_activity">Check Container </string>
+
+    <string name="failed_to_record">Failed to record video</string>
+
+
+    <string name="dialog_logout_title">Logout</string>
+    <string name="dialog_logout_message">Are you sure you want to logout?</string>
+
+    <string name="logout_dialog_title">Exit confirmation</string>
+    <string name="logout_dialog_message">Are you sure you want to logout?</string>
+    <string name="logout_dialog_button_yes">Logout</string>
+    <string name="logout_dialog_button_no">Stay</string>
+
+    <string name="sign_in_enter_login">Enter login</string>
+    <string name="sign_in_enter_password">Enter password</string>
+    <string name="sign_in_enter">Enter</string>
+
+
+    <string name="app_version">%1$s - v. %2$s</string>
+    <string name="game_view_content_description">Game view</string>
+
+    <string name="add_attached_files">Add attachment (%1$d/%2$d)</string>
+
+    <string name="take_barcode_picture">Take barcode picture</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <string name="open_camera">OPEN CAMERA</string>
+
+
+    <!-- home -->
+    <string name="home_tile_self_monitoring">Self-monitoring</string>
+    <string name="home_tile_sworned_statement">Declaration</string>
+    <string name="optional_comment">Optional comment</string>
+    <string name="pallet_information_text">Pallet content</string>
+
+    <!-- Check Palette -->
+
+    <!-- Image editor -->
+    <string name="editor_image_clear_confirm_title">Discard changes</string>
+    <string name="editor_image_clear_confirm_message">Current changes will be discarded. Discard changes?</string>
+    <string name="editor_image_clear_positive">Discard</string>
+    <string name="cancel_alert_dialog">Cancel</string>
+    <string name="itinirary">Itinéraire</string>
+
+</resources>
