@@ -6,21 +6,21 @@ import androidx.lifecycle.Observer
 
 open class BaseFragment : Fragment() {
 
-    protected lateinit var viewModelImpl: BaseFragmentViewModelImpl
+    private lateinit var viewModel: BaseFragmentViewModel
     private var activityListener: OnFragmentListener? = null
 
     @Suppress("unused")
-    fun provideViewModel(baseViewModelImpl: BaseFragmentViewModelImpl) {
-        this.viewModelImpl = baseViewModelImpl
+    fun provideViewModel(baseViewModelImpl: BaseFragmentViewModel) {
+        this.viewModel = baseViewModelImpl
 
-        viewModelImpl.showWait.observe(viewLifecycleOwner, showWaitObserver)
-        viewModelImpl.toastMessageString.observe(viewLifecycleOwner, showToastMessageString)
+        viewModel.showWait.observe(viewLifecycleOwner, showWaitObserver)
+        viewModel.toastMessageString.observe(viewLifecycleOwner, showToastMessageString)
     }
 
     override fun onActivityCreated(bundle: Bundle?) {
         super.onActivityCreated(bundle)
 
-      //  activityListener = activity as OnFragmentListener
+
     }
 
     private val showWaitObserver = Observer<Boolean> {

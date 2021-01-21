@@ -3,19 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.mzd.myapp.ui.splash.SplashActivityViewModelImpl" />
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_splash_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_background"
-        android:onClick="@{ v -> viewModel.onSplashFinished()}"
         tools:context="com.mzd.myapp.ui.splash.SplashActivity">
 
         <ImageView
@@ -36,25 +29,24 @@
 
         <TextView
             android:id="@+id/tv_app_name"
-            style="@style/textMainStyle.normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_normal"
             app:layout_constraintBottom_toTopOf="@id/tv_app_version"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/iv_logo"
+            app:layout_constraintStart_toStartOf="@id/iv_logo"
             app:layout_constraintTop_toBottomOf="@+id/iv_logo"
             tools:text="My App "
-            android:textSize="34sp"
+            android:textSize="@dimen/text_m"
            />
 
         <TextView
             android:id="@+id/tv_app_version"
-            style="@style/textMainStyle.small"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_app_name"
+            app:layout_constraintStart_toStartOf="@id/tv_app_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
             tools:text="vX.Y" />
 

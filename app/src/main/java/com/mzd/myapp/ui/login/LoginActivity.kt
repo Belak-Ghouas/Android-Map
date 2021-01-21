@@ -13,32 +13,26 @@ import android.view.View.VISIBLE
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.mzd.myapp.R
 import com.mzd.myapp.data.models.LoginHistory
-import com.mzd.myapp.databinding.ActivityLoginBinding
 import com.mzd.myapp.ui.base.BaseActivity
-import com.mzd.myapp.ui.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import org.koin.java.KoinJavaComponent
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
-
-class LoginActivity : BaseActivity<LoginActivityViewModelImpl>(), View.OnClickListener {
+class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // thanks to generics, viewModelImpl is of type MainActivityViewModelImpl, no cast needed
-        viewModelImpl = KoinJavaComponent.inject(LoginActivityViewModelImpl::class.java).value
+        viewModel = getViewModel()
+        setContentView(R.layout.activity_login)
 
-        val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        binding.viewModel = viewModelImpl
-        binding.lifecycleOwner = this
 
         initViews()
         initObservers()
-        viewModelImpl.onActivityReady(this)
+        viewModel.onActivityReady(this)
 
 
     }
@@ -47,37 +41,33 @@ class LoginActivity : BaseActivity<LoginActivityViewModelImpl>(), View.OnClickLi
     override fun initObservers() {
         super.initObservers()
 
-        viewModelImpl.loginHistories.observe(this, Observer {
+        viewModel.loginHistories.observe(this, Observer {
             handleHistoryList(it)
         })
 
-        viewModelImpl.login.observe(this, Observer {
+        viewModel.login.observe(this, Observer {
             sign_in_login.setText(it)
         })
 
-        viewModelImpl.password.observe(this, Observer {
+        viewModel.password.observe(this, Observer {
             sign_in_password.setText(it)
         })
 
     }
 
     override fun onClick(v: View?) {
-        viewModelImpl.onHistorySelected(v!!.tag as LoginHistory)
+        viewModel.onHistorySelected(v!!.tag as LoginHistory)
     }
 
-    fun sendMessage(view: View?) {
-        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-        startActivity(intent)
-    }
 
-    private fun initViews() {
+  override fun initViews() {
         // Now, add the specific observers.
 
-        tv_app_nameL.text="Optimize Loading"
+   //     tv_app_nameL.text="Optimize Loading"
 
         sign_in_login.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                viewModelImpl.onLoginChanged(s.toString())
+                viewModel.onLoginChanged(s.toString())
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -89,7 +79,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModelImpl>(), View.OnClickLi
 
         sign_in_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                viewModelImpl.onPasswordChanged(s.toString())
+                viewModel.onPasswordChanged(s.toString())
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -100,7 +90,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModelImpl>(), View.OnClickLi
         })
 
         btn_sign_in_button.setOnClickListener {
-            viewModelImpl.onLogin(this@LoginActivity)
+            viewModel.onLogin(this@LoginActivity)
         }
 
         iv_login_suggestions_icon.setOnClickListener {

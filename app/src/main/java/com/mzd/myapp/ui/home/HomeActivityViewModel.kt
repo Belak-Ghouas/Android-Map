@@ -1,12 +1,21 @@
 package com.mzd.myapp.ui.home
 
-import android.content.Context
-import com.mzd.myapp.ui.base.BaseToolbarActivityViewModel
 
-interface HomeActivityViewModel : BaseToolbarActivityViewModel {
-    fun onActivityReady(context: Context)
-    fun onOpenUnitySceneClicked()
-    fun  onCheckPalet(context: Context)
-    fun  onCheckContainer(context: Context)
+import com.mzd.myapp.ui.Coordinator
+import com.mzd.myapp.ui.base.BaseToolbarActivityInteraction
+
+class HomeActivityViewModel(appCoordinator: Coordinator) :
+    BaseToolbarActivityInteraction(appCoordinator),
+    HomeActivityViewInteraction {
+
+    override fun onActivityReady() {
+        // The activity is ready.
+        super.activityReady()
+
+    }
+
+
 
 }
+
+

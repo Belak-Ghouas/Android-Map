@@ -1,28 +1,21 @@
 package com.mzd.myapp.ui.register
 
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
 import com.mzd.myapp.R
-import com.mzd.myapp.databinding.ActivityRegisterBinding
-import com.mzd.myapp.databinding.ActivitySplashBinding
 import com.mzd.myapp.ui.base.BaseToolbarActivity
-import org.koin.java.KoinJavaComponent
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 
-class RegisterActivity: BaseToolbarActivity<RegisterActivityViewModelImpl>() {
+class RegisterActivity: BaseToolbarActivity<RegisterActivityViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModelImpl = KoinJavaComponent.inject(RegisterActivityViewModelImpl::class.java).value
-
-        val binding: ActivityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register)
-        binding.viewModel = viewModelImpl
-        binding.lifecycleOwner = this
-
+        viewModel =getViewModel()
+        setContentView(R.layout.activity_register)
         initViews()
         initObservers()
-        viewModelImpl.activityReady()
+        viewModel.activityReady()
     }
 
-    fun initViews(){}
+   override fun initViews(){}
 }

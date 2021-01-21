@@ -1,8 +1,8 @@
-package com.psa.containeroptim.data.database.dao
+package com.mzd.myapp.data.database.dao
 
 import androidx.room.*
 import androidx.room.OnConflictStrategy.REPLACE
-import com.psa.containeroptim.data.database.entities.MediaEntity
+import com.mzd.myapp.data.database.entities.MediaEntity
 
 
 @Dao

@@ -9,19 +9,18 @@ import com.mzd.myapp.R
 import com.mzd.myapp.databinding.ActivityHomeBinding
 import com.mzd.myapp.ui.base.BaseToolbarActivity
 import kotlinx.android.synthetic.main.activity_home.*
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.java.KoinJavaComponent
 
 
-class HomeActivity : BaseToolbarActivity<HomeActivityViewModelImpl>(), View.OnClickListener {
+class HomeActivity : BaseToolbarActivity<HomeActivityViewModel>(), View.OnClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // thanks to generics, viewModelImpl is of type MainActivityViewModelImpl, no cast needed
-        viewModelImpl = KoinJavaComponent.inject(HomeActivityViewModelImpl::class.java).value
-
-        val binding: ActivityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        binding.lifecycleOwner = this
+        viewModel = getViewModel()
+        setContentView(R.layout.activity_home)
 
         // TODO Be Advised ! showBackButton() method should not be called here ! the decision must be performed from VM
         toolbarShowHomeIcons(true)
@@ -30,22 +29,12 @@ class HomeActivity : BaseToolbarActivity<HomeActivityViewModelImpl>(), View.OnCl
         initViews()
         initObservers()
 
-        viewModelImpl.onActivityReady(this)
+        viewModel.onActivityReady()
 
     }
 
-    private fun initViews() {
+    override fun initViews() {
 
-       ib_check_palet_button.setOnClickListener {
-            viewModelImpl.onCheckPalet(this@HomeActivity)
-        }
-        iv_logo_container.setOnClickListener {
-            viewModelImpl.onOpenUnitySceneClicked()
-
-        }
-        ib_check_container.setOnClickListener {
-            viewModelImpl.onCheckContainer(this@HomeActivity)
-        }
     }
 }
 

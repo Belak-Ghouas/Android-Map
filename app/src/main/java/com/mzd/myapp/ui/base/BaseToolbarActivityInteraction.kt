@@ -1,9 +1,9 @@
 package com.mzd.myapp.ui.base
 
 import android.view.MenuItem
-import com.mzd.myapp.ui.AppCoordinator
+import com.mzd.myapp.ui.Coordinator
 
-open class BaseToolbarActivityViewModelImpl(appCoordinator: AppCoordinator) : BaseActivityViewModelImpl(appCoordinator),
+open class BaseToolbarActivityInteraction(appCoordinator: Coordinator) : BaseActivityViewModel(appCoordinator),
     BaseToolbarActivityViewModel {
     override fun viewDestroyed() {
         TODO("Not yet implemented")

@@ -9,7 +9,7 @@
 
 <variable
     name="viewModel"
-    type="com.mzd.myapp.ui.register.RegisterActivityViewModelImpl" />
+    type="com.mzd.myapp.ui.register.RegisterActivityViewModel" />
 </data>
 
 

@@ -1,10 +1,10 @@
-package com.psa.containeroptim.data.database.dao
+package com.mzd.myapp.data.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.psa.containeroptim.data.database.entities.User
+import com.mzd.myapp.data.database.entities.User
 
 @Dao
 interface UserDao {

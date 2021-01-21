@@ -1,4 +1,10 @@
 package com.mzd.myapp.ui.register
 
-interface RegisterActivityViewModel {
+import com.mzd.myapp.ui.Coordinator
+import com.mzd.myapp.ui.base.BaseToolbarActivityInteraction
+
+class RegisterActivityViewModel (appCoordinator: Coordinator) :
+    BaseToolbarActivityInteraction(appCoordinator),
+    RegisterInteraction {
+
 }

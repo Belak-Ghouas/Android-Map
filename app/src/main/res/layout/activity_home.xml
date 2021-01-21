@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.mzd.myapp.ui.home.HomeActivityViewModelImpl" />
+            type="com.mzd.myapp.ui.home.HomeActivityViewModel" />
     </data>
 
 

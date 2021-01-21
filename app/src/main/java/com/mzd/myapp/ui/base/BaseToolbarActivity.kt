@@ -11,16 +11,15 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuBuilder
 import com.mzd.myapp.R
 
-abstract class BaseToolbarActivity<VM : BaseToolbarActivityViewModelImpl> : BaseActivity<VM>(),
+abstract class BaseToolbarActivity<VM : BaseToolbarActivityInteraction> : BaseActivity<VM>(),
     View.OnClickListener {
 
-    // private val baseToolbarViewModel: BaseToolbarActivityViewModelImpl by viewModel()
+
     private var menu: Menu? = null
-    var pres:VM?=null
     var ivPSALogo: ImageView? = null
     var ivBackArrow: ImageView? = null
     var ivLogOut: ImageView? = null
-    var toolbar_UserId: TextView?=null
+    var toolbar_UserId: TextView?= null
     var tvScreenName: TextView? = null
     var tvUserName: TextView? = null
 
@@ -38,19 +37,7 @@ abstract class BaseToolbarActivity<VM : BaseToolbarActivityViewModelImpl> : Base
         return true
     }
 
-    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
-        menuItemsVisibility(menu)
 
-        return super.onPrepareOptionsMenu(menu)
-    }
-
-    private fun menuItemsVisibility(menu: Menu) {
-
-    }
-
-    /**
-     * @param showIcons show logo
-     */
     protected open fun toolbarShowHomeIcons(showLogo: Boolean) {
         ivPSALogo = findViewById(R.id.ic_psa_logo)
         ivBackArrow = findViewById(R.id.toolbar_back)
@@ -122,35 +109,26 @@ abstract class BaseToolbarActivity<VM : BaseToolbarActivityViewModelImpl> : Base
             .setMessage(R.string.logout_dialog_message)
             .setPositiveButton(
                 R.string.logout_dialog_button_yes,
-                DialogInterface.OnClickListener { dialog, which -> pres?.logoutConfirmed() })
+                DialogInterface.OnClickListener { dialog, which ->viewModel.logoutConfirmed() })
 
             .setNegativeButton(R.string.logout_dialog_button_no, null)
             .show()
     }
 
 
-    protected fun setClientName() {
 
-    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // presenter.onOptionsItemSelected should return true if it's been handled. If not handled ('false'),
         // we want to leave it to the super class.
-        when (item.itemId) {
+        return when (item.itemId) {
             android.R.id.home -> {
                 // Get one activity back.
-                viewModelImpl.onMenuHome()
-                return true
+                viewModel.onMenuHome()
+                true
             }
-//            R.id.menu_action_settings -> {
-//                viewModelImpl.onMenuSettings()
-//                return true
-//            }
-//            R.id.menu_action_about -> {
-//                viewModelImpl.onMenuAbout()
-//                return true
-//            }
-            else -> return super.onOptionsItemSelected(item)
+
+            else -> super.onOptionsItemSelected(item)
         }
 
     }

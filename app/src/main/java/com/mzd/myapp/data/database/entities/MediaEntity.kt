@@ -1,4 +1,4 @@
-package com.psa.containeroptim.data.database.entities
+package com.mzd.myapp.data.database.entities
 
 import androidx.room.*
 
