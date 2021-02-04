@@ -6,7 +6,9 @@ import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.mzd.myapp.R
 import com.mzd.myapp.data.base.ActivityParams
+import kotlinx.android.synthetic.main.custom_black_toolbar.*
 
 
 abstract class BaseActivity<VM : BaseActivityViewModel> : AppCompatActivity() {

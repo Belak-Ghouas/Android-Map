@@ -1,8 +1,6 @@
 package com.mzd.myapp.ui.base
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
-import android.content.DialogInterface
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -10,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuBuilder
 import com.mzd.myapp.R
+import kotlinx.android.synthetic.main.custom_black_toolbar.*
 
 abstract class BaseToolbarActivity<VM : BaseToolbarActivityInteraction> : BaseActivity<VM>(),
     View.OnClickListener {
@@ -39,7 +38,7 @@ abstract class BaseToolbarActivity<VM : BaseToolbarActivityInteraction> : BaseAc
 
 
     protected open fun toolbarShowHomeIcons(showLogo: Boolean) {
-        ivPSALogo = findViewById(R.id.ic_psa_logo)
+        ivPSALogo = findViewById(R.id.ic_logo)
         ivBackArrow = findViewById(R.id.toolbar_back)
         ivLogOut = findViewById(R.id.toolbar_Logout)
         tvUserName = findViewById(R.id.toolbar_UserId)
@@ -96,27 +95,21 @@ abstract class BaseToolbarActivity<VM : BaseToolbarActivityInteraction> : BaseAc
         }
 
         if (R.id.toolbar_Logout == v?.id) {
-           // super.onBackPressed()
-            showLogoutConfirmation()
+
+        }
+
+        if(R.id.ic_menu==v?.id){
+            openNavView()
         }
 
 
     }
 
-    open fun showLogoutConfirmation() {
-        AlertDialog.Builder(this)
-            .setTitle(R.string.logout_dialog_title)
-            .setMessage(R.string.logout_dialog_message)
-            .setPositiveButton(
-                R.string.logout_dialog_button_yes,
-                DialogInterface.OnClickListener { dialog, which ->viewModel.logoutConfirmed() })
 
-            .setNegativeButton(R.string.logout_dialog_button_no, null)
-            .show()
+
+    open fun openNavView(){
+
     }
-
-
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // presenter.onOptionsItemSelected should return true if it's been handled. If not handled ('false'),
@@ -131,6 +124,11 @@ abstract class BaseToolbarActivity<VM : BaseToolbarActivityInteraction> : BaseAc
             else -> super.onOptionsItemSelected(item)
         }
 
+    }
+
+    override fun initViews() {
+        super.initViews()
+        ic_menu.setOnClickListener(this)
     }
 
 }

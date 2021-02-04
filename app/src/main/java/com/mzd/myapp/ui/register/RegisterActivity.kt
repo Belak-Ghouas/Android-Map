@@ -11,7 +11,7 @@ class RegisterActivity: BaseToolbarActivity<RegisterActivityViewModel>() {
         super.onCreate(savedInstanceState)
 
         viewModel =getViewModel()
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_home)
         initViews()
         initObservers()
         viewModel.activityReady()

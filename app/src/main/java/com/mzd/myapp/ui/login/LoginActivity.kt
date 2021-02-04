@@ -1,7 +1,6 @@
 package com.mzd.myapp.ui.login
 
 import android.animation.ObjectAnimator
-import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.Editable
@@ -25,11 +24,8 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // thanks to generics, viewModelImpl is of type MainActivityViewModelImpl, no cast needed
         viewModel = getViewModel()
         setContentView(R.layout.activity_login)
-
-
         initViews()
         initObservers()
         viewModel.onActivityReady(this)
@@ -41,15 +37,15 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
     override fun initObservers() {
         super.initObservers()
 
-        viewModel.loginHistories.observe(this, Observer {
+        viewModel.loginHistories.observe(this, {
             handleHistoryList(it)
         })
 
-        viewModel.login.observe(this, Observer {
-            sign_in_login.setText(it)
+        viewModel.login.observe(this, {
+            ed_login.setText(it)
         })
 
-        viewModel.password.observe(this, Observer {
+        viewModel.password.observe(this, {
             sign_in_password.setText(it)
         })
 
@@ -61,11 +57,9 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
 
 
   override fun initViews() {
-        // Now, add the specific observers.
 
-   //     tv_app_nameL.text="Optimize Loading"
 
-        sign_in_login.addTextChangedListener(object : TextWatcher {
+        ed_login.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 viewModel.onLoginChanged(s.toString())
             }
@@ -93,7 +87,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
             viewModel.onLogin(this@LoginActivity)
         }
 
-        iv_login_suggestions_icon.setOnClickListener {
+        iv_history_login.setOnClickListener {
             handleSuggestionToggle()
         }
     }
@@ -101,7 +95,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
     private fun handleHistoryList(loginHistory: List<LoginHistory>?) {
         // Populate the list accordingly.
         if (loginHistory?.isNotEmpty() == true) {
-            iv_login_suggestions_icon.visibility = VISIBLE
+            iv_history_login.visibility = VISIBLE
             ll_login_history_container.removeAllViews()
 
             for (historyLogin in loginHistory) {
@@ -114,7 +108,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
                 ll_login_history_container.addView(tv, ll)
             }
         } else {
-            iv_login_suggestions_icon.visibility = GONE
+            iv_history_login.visibility = GONE
         }
     }
 
@@ -134,7 +128,7 @@ class LoginActivity : BaseActivity<LoginActivityViewModel>(), View.OnClickListen
 
         drawable?.let {
             it.setTint(ContextCompat.getColor(this, R.color.clickable_color))
-            iv_login_suggestions_icon.setImageDrawable(it)
+            iv_history_login.setImageDrawable(it)
 
             val animator = ObjectAnimator.ofInt(it, "level", 0, 10000).setDuration(200)
             animator.start()

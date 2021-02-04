@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,47 +11,47 @@
         android:orientation="vertical">
 
 
-
         <ImageView
-            android:layout_width="209dp"
-            android:layout_height="167dp"
+            android:layout_width="@dimen/image_xl"
+            android:layout_height="@dimen/image_xl"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margin_normal_x3"
-            android:src="@mipmap/logo"
-            app:tint="@color/white"
             android:contentDescription="TODO"
-            />
+            android:src="@drawable/ic_back"
+             />
 
 
         <TextView
             android:id="@+id/tv_app_nameL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:layout_gravity="center"
+            android:textColor="@color/black"
             android:textSize="34sp"
             tools:text="App" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/card_login_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:padding="@dimen/margin_normal"
+            android:layout_gravity="center_horizontal"
             tools:context="com.mzd.myapp.ui.login.LoginActivity">
 
             <ImageView
-                android:id="@+id/iv_login_suggestions_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:id="@+id/iv_history_login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/margin_normal"
 
                 android:src="@drawable/ic_arrow_rotate_down"
-                app:layout_constraintBottom_toBottomOf="@+id/til_login_layout"
-                app:layout_constraintEnd_toStartOf="@+id/til_login_layout"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_login"
+                app:layout_constraintEnd_toStartOf="@+id/ed_login"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/til_login_layout"
-                tools:ignore="ContentDescription"
-                app:tint="@color/clickable_color" />
+                app:layout_constraintTop_toTopOf="@+id/ed_login"
+                app:tint="@color/colorPrimaryDark"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:id="@+id/history_scroller_container"
@@ -61,10 +59,11 @@
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="@+id/til_login_layout"
-                app:layout_constraintStart_toStartOf="@+id/til_login_layout"
-                app:layout_constraintTop_toBottomOf="@+id/til_login_layout"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:layout_marginTop="@dimen/margin_normal_x2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ed_login"
+                app:layout_constraintStart_toStartOf="@+id/ed_login"
+                app:layout_constraintTop_toBottomOf="@+id/ed_login">
 
                 <HorizontalScrollView
                     android:id="@+id/history_scroller"
@@ -85,42 +84,36 @@
                     </LinearLayout>
                 </HorizontalScrollView>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_password_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:passwordToggleEnabled="true"
-                    android:layout_marginTop="@dimen/margin_normal_x2"
-                   >
+
 
                     <EditText
-                        style="@style/loginParent"
                         android:id="@+id/sign_in_password"
+                        android:layout_height="@dimen/et_login_height"
+                        style="@style/loginParent"
+                        android:background="@drawable/arrounded_style"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+
                         android:hint="@string/sign_in_enter_password"
-                        android:imeOptions="actionDone"
-
-
-                       />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:imeOptions="actionDone" />
 
                 <!-- there is double margin, because the TextInputLayout and DeletableEditText have both one in there respective styles. -->
                 <Button
                     android:id="@+id/btn_sign_in_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    style="@style/loginButton"
+
                     android:layout_marginStart="@dimen/margin_normal"
                     android:layout_marginTop="@dimen/margin_normal_x4"
                     android:layout_marginEnd="@dimen/margin_normal"
                     android:text="@string/sign_in_enter" />
 
                 <TextView
-                    android:id="@+id/create_acount"
-                    android:layout_marginTop="@dimen/margin_normal_x4"
+                    android:id="@+id/create_account"
                     android:layout_width="match_parent"
-                    android:gravity="center"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_normal_x4"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_button"
@@ -128,30 +121,23 @@
 
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_login_layout"
+
+            <EditText
+                android:id="@+id/ed_login"
+                style="@style/loginParent"
+                android:background="@drawable/arrounded_style"
                 android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="@dimen/margin_normal_x4"
-                android:layout_marginEnd="@dimen/margin_normal_x4"
+                android:layout_height="@dimen/et_login_height"
+                android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:hint="@string/sign_in_enter_login"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+                android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_history_login"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/history_scroller_container">
 
-                <EditText
-                    android:id="@+id/sign_in_login"
-                    style="@style/loginParent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-                    android:hint="@string/sign_in_enter_login"
-                    android:imeOptions="actionNext"
-                    android:inputType="textNoSuggestions|textVisiblePassword"
-                    android:singleLine="true"
-
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

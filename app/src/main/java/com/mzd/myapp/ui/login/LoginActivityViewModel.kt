@@ -47,14 +47,13 @@ class LoginActivityViewModel(coordinator: Coordinator, val sharedPrefs: AppShare
     }
 
     private fun checkFormValidity() {
-        // TODO: report the rules
+
         loginFormValid.value = _login?.isNotEmpty() == true && _password?.isNotEmpty() == true
     }
 
     override fun onLogin(context: Context) {
         showWait(true)
-        // For the sake of this demo, we assume the login is valid, and we add the entry in the history of entries.
-        // The code below should be done ONLY upon successful login.
+
         _login?.let {
             AppSharedPreferences.addOrUpdateLoginHistory(context, LoginHistory(it))
         }

@@ -6,7 +6,6 @@ import android.os.Handler
 import androidx.lifecycle.Observer
 import com.mzd.myapp.R
 import com.mzd.myapp.ui.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_splash.*
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class SplashActivity : BaseActivity<SplashActivityViewModel>(), Runnable {
@@ -33,11 +32,11 @@ class SplashActivity : BaseActivity<SplashActivityViewModel>(), Runnable {
 
 
     override fun initViews() {
-        cl_splash_container.setOnClickListener {
+      /*  cl_splash_container.setOnClickListener {
          viewModel.onSplashFinished()
         }
         tv_app_version.text = versionString
-        tv_app_name.text=getString(R.string.app_name)
+        tv_app_name.text=getString(R.string.app_name)*/
     }
 
     private fun handleTimeout(duration: Long) {
